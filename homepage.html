@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="homepage.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="includeheader"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script> $(function(){
+ $("#includeheader").load("includes/home_html/header.html");
+});
+</script>
+
+  
+
+<table class="F_table">
+  <tr>
+  <td>
+<!-- Main Container -->
+<div class="F_container">
+    
+  <!-- Alphabet Filter Section -->
+  <div class="F_alphabet-section">
+      <h2>Find diseases & conditions by first letter</h2>
+      <div class="F_alphabet-links">
+          <a href="diseases.html?letter=A">A</a>
+          <a href="diseases.html?letter=B">B</a>
+          <a href="diseases.html?letter=C">C</a>
+          <a href="diseases.html?letter=D">D</a>
+          <a href="diseases.html?letter=E">E</a>
+          <a href="diseases.html?letter=F">F</a>
+          <a href="diseases.html?letter=G">G</a>
+          <a href="diseases.html?letter=H">H</a>
+          <a href="diseases.html?letter=I">I</a>
+          <a href="diseases.html?letter=J">J</a>
+          <a href="diseases.html?letter=K#">K</a>
+          <a href="diseases.html?letter=L">L</a>
+          <a href="diseases.html?letter=M">M</a>
+          <a href="diseases.html?letter=N">N</a>
+          <a href="diseases.html?letter=O">O</a>
+          <a href="diseases.html?letter=P">P</a>
+          <a href="diseases.html?letter=Q">Q</a>
+          <a href="diseases.html?letter=R">R</a>
+          <a href="diseases.html?letter=S">S</a>
+          <a href="diseases.html?letter=T">T</a>
+          <a href="diseases.html?letter=U">U</a>
+          <a href="diseases.html?letter=V">V</a>
+          <a href="diseases.html?letter=W">W</a>
+          <a href="diseases.html?letter=X">X</a>
+          <a href="diseases.html?letter=Y">Y</a>
+          <a href="diseases.html?letter=Z">Z</a>
+          <a href="diseases.html?letter=other">#</a>
+        </div>
+    </div>
+    </td>
+    <td>
+    <!-- Search Section -->
+    <div class="F_search-section">
+        <label for="F_search">Search diseases & conditions</label></br>
+        <div class="F_search-container">
+             <!-- Search icon on the left -->
+
+              <input type="text" id="F_search" placeholder="search..." />
+            <span class="F_clear-button" id="F_clear-button" style="display: none;">&times;</span> <!-- Clear button, hidden initially -->
+            <button id="F_search-button" style="display: none;">Search</button> <!-- Search button, hidden initially -->
+        </div>
+    </div>  
+  
+
+  </div>
+</td>
+</tr>
+</table>
+<script>
+  // JavaScript to handle search button click
+  document.getElementById("F_search-button").addEventListener("click", function() {
+  const query = document.getElementById("F_search").value.trim();
+  if (query) {
+      // Redirect to search-results.html with the search query in the URL
+      window.location.href = `diseases.html?query=${encodeURIComponent(query)}`;
+  } else {
+      alert("Please enter a search term.");
+  }
+  });
+
+
+  const searchInput = document.getElementById("F_search");
+  const searchButton = document.getElementById("F_search-button");
+
+  // Function to toggle the visibility of the search button based on input value
+  searchInput.addEventListener("input", function() {
+  if (searchInput.value.trim() !== "") {
+  searchButton.style.display = "inline-block"; // Show the button
+  } else {
+  searchButton.style.display = "none"; // Hide the button if input is empty
+  }
+  });
+
+  // Handle the search button click
+  searchButton.addEventListener("click", function() {
+  const query = searchInput.value.trim();
+  if (query) {
+  // Redirect to search-results.html with the search query in the URL
+  window.location.href = `diseases.html?query=${encodeURIComponent(query)}`;
+  }
+  });
+</script>
+ <div class="Y_higherdiv">
+  <div class="Y_upperPart">
+    <div class="Y_div1">
+      <h1>healing Starts here</h1>
+      <h5>The right answers the first time</h5>
+      <p>
+        Effective treatment depends on getting the right diagnosis.Our
+        experts diagnose and treat the toughest medical challenges
+      </p>
+      <h5>Top Clinic in the universe</h5>
+      <p>
+        CaringHands Clinic has more No.1 rankings than any other hospital in
+        the nation according to me
+        <a  class="sfwef" href="">Learn more about our top-ranked specialties</a>
+      </p>
+      <a href="">
+        <button class="Y_button">why choose CaringHands Clinic</button>
+      </a>
+    </div>
+    <div class="Y_div2">
+      <img src="imgerf/img1.jpg" alt="" class="Y_upperimages" />
+    </div>
+    <div class="Y_div1">
+      <h1>World-class care for global patients</h1>
+      <p>
+        We make it easy for patients around the world to get care from
+        CaringHands Clinic
+      </p>
+      <h5>Top Clinic in the universe</h5>
+      <p>
+        CaringHands Clinic has more No.1 rankings than any other hospital in
+        the nation according to me
+        <a href="hhh">Learn more about our top-ranked specialties</a>
+      </p>
+      <a href="">
+        <button class="Y_button">why choose CaringHands Clinic</button>
+      </a>
+    </div>
+    <div class="Y_div2">
+      <img src="imgerf/img2.png" alt="" class="Y_upperimages" />
+    </div>
+  </div>
+
+
+
+<script>
+function togglePopup() {
+  const overlay = document.getElementById("popupOverlay");
+  overlay.classList.toggle("show");
+}
+</script>
+
+<!-- include locations -->
+<div id="includelocations"></div>
+<script>
+  $(function(){
+    $("#includelocations").load("includes/home_html/locations.html");
+  });
+</script>
+
+<!-- include featuredareas -->
+<div id="includefeaturedareas"></div>
+<script>
+  $(function(){
+    $("#includefeaturedareas").load("includes/home_html/featuredareas.html");
+  });
+</script>
+
+<!-- include footer -->
+<div id="includefooter"></div>
+<script>
+  $(function(){
+    $("#includefooter").load("includes/home_html/footer.html");
+  });
+</script>
+
+<!-- include feedback -->
+<div id="includefeedback"></div>
+<script>
+  $(function(){
+    $("#includefeedback").load("includes/home_html/feedback.html");
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <div class="T_toggle">
+        <button class="T_btn-open-popup" onclick="togglePopup()">Feedback</button>
+      </div>
+    
+      <div id="popupOverlay" class="T_overlay-container">
+        <div class="T_popup-box">
+          <button
+            class="T_btn-close-popup2"
+            onclick="togglePopup()"
+            style="
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              background: none;
+              border: none;
+              font-size: 20px;
+              cursor: pointer;
+            "
+          >
+            &times;
+          </button>
+          
+          <form class="T_form-container">
+            <p><h3 style="color: rgb(0, 8, 0)">We'd love your feedback!</h3></p>
+            <p>(checking star is from Do Not Agree At All to Completely Agree)</p>
+            <p>I was able to complete the main purpose of my visit today.</p>
+            <div class="T_rate">
+              <input type="radio" id="star5" name="rate" value="5" />
+              <label for="star5" title="text">5 stars</label>
+              <input type="radio" id="star4" name="rate" value="4" />
+              <label for="star4" title="text">4 stars</label>
+              <input type="radio" id="star3" name="rate" value="3" />
+              <label for="star3" title="text">3 stars</label>
+              <input type="radio" id="star2" name="rate" value="2" />
+              <label for="star2" title="text">2 stars</label>
+              <input type="radio" id="star1" name="rate" value="1" />
+              <label for="star1" title="text">1 star</label>
+            </div>
+    
+            <p>It was easy to perform my task today.</p>
+            <div class="T_rate2">
+              <input type="radio" id="star51" name="rate1" value="51" />
+              <label for="star51" title="text">5 stars</label>
+              <input type="radio" id="star41" name="rate1" value="41" />
+              <label for="star41" title="text">4 stars</label>
+              <input type="radio" id="star31" name="rate1" value="31" />
+              <label for="star31" title="text">3 stars</label>
+              <input type="radio" id="star21" name="rate1" value="21" />
+              <label for="star21" title="text">2 stars</label>
+              <input type="radio" id="star11" name="rate1" value="11" />
+              <label for="star11" title="text">1 star</label>
+            </div>
+            <div>
+              <label for="nationality"
+                >What was the main purpose of your visit today?</label
+              >
+              <select name="nationality" id="T_nationality">
+                <option value="1">Explore a health topic</option>
+                <option value="2">
+                  Understand is our clinic is a good option for medical care
+                </option>
+                <option value="3">Make an apointment with our clinic</option>
+                <option value="4">Access patient online service</option>
+                <option value="5">Other</option>
+              </select>
+            </div>
+            <p>Overall, how satisfied are you with this website?</p>
+            <div class="T_rate3">
+              <input type="radio" id="star52" name="rate2" value="52" />
+              <label for="star52" title="text">5 stars</label>
+              <input type="radio" id="star42" name="rate2" value="42" />
+              <label for="star41" title="text">4 stars</label>
+              <input type="radio" id="star32" name="rate2" value="32" />
+              <label for="star32" title="text">3 stars</label>
+              <input type="radio" id="star22" name="rate2" value="22" />
+              <label for="star22" title="text">2 stars</label>
+              <input type="radio" id="star12" name="rate2" value="12" />
+              <label for="star12" title="text">1 star</label>
+            </div>
+    
+            <p>How likely are you to recommend this website?</p>
+            <div class="T_rate4">
+              <input type="radio" id="star53" name="rate3" value="53" />
+              <label for="star53" title="text">5 stars</label>
+              <input type="radio" id="star43" name="rate3" value="43" />
+              <label for="star43" title="text">4 stars</label>
+              <input type="radio" id="star33" name="rate3" value="33" />
+              <label for="star33" title="text">3 stars</label>
+              <input type="radio" id="star23" name="rate3" value="23" />
+              <label for="star23" title="text">2 stars</label>
+              <input type="radio" id="star13" name="rate3" value="13" />
+              <label for="star13" title="text">1 star</label>
+            </div>
+            <p>Please tell us the reasons for your scores.</p>
+            <div>
+              <textarea
+                class="T_lktaba"
+                placeholder="please do not include any personnaly identifiable information in your response"
+                name="Biography"
+                style="height: 100px; width: 230px"
+              ></textarea>
+            </div>
+            <p>
+              Your responses will be used in accordance with our
+              <a href="">privacy policy.</a>
+            </p>
+            <label class="T_form-label" for="name"> Username: </label>
+            <input
+              class="T_form-input"
+              type="text"
+              placeholder="Enter Your Username"
+              id="name"
+              name="name"
+              required
+            />
+    
+            <label class="T_form-label" for="email">Email:</label>
+            <input
+              class="T_form-input"
+              type="email"
+              placeholder="Enter Your Email"
+              id="email"
+              name="email"
+              required
+            />
+    
+            <button class="T_btn-submit" type="submit">Submit</button>
+          </form>
+    
+          <button class="T_btn-close-popup" onclick="togglePopup()">Close</button>
+        </div>
+      </div>
+    
+      <script>
+        function togglePopup() {
+          const overlay = document.getElementById("popupOverlay");
+          overlay.classList.toggle("show");
+    
+        }
+    </script>
+</body>
+</html>
